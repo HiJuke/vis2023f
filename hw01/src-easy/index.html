@@ -147,8 +147,7 @@
 <body>
     <h3>Data Visualization 成績</h3>
 
-    <div id="div1"><table><tr><td class="excellent-kid">10<img src="./index_files/52.svg" x="0" y="0" width="60" height="60"></td><td class="good-kid">9<img src="./index_files/51.svg" x="0" y="0" width="120" height="120"></td><td class="good-kid">8<img src="./index_files/42.svg" x="0" y="0" width="180" height="180"></td><td class="good-kid">7<img src="./index_files/41.svg" x="0" y="0" width="240" height="240"></td><td class="fair-kid">6<img src="./index_files/32.svg" x="0" y="0" width="300" height="300"></td><td class="fair-kid">5<img src="./index_files/31.svg" x="0" y="0" width="360" height="360"></td><td class="fair-kid">4<img src="./index_files/22.svg" x="0" y="0" width="420" height="420"></td><td class="fair-kid">3<img src="./index_files/21.svg" x="0" y="0" width="480" height="480"></td><td class="fair-kid">2<img src="./index_files/12.svg" x="0" y="0" width="540" height="540"></td><td class="poor-kid">1<img src="./index_files/11.svg" x="0" y="0" width="600" height="600"></td><td class="poor-kid">0<img src="./index_files/01.svg" x="0" y="0" width="660" height="660"></td></tr></table></div>
-
+    <div id="div1"></div>
     <div id="div2"></div>
 
     <script type="text/javascript" charset="utf-8">
@@ -173,18 +172,18 @@
                 else return "poor-kid";})
             .append("img")
             .attr("src", function (d, i) { 
-                if (d == 10) return "./svg10/52.svg";
-                else if (d == 9) return "./svg10/51.svg";
-                else if (d == 8) return "./svg10/42.svg";
-                else if (d == 7) return "./svg10/41.svg";
-                else if (d == 6) return "./svg10/32.svg";
-                else if (d == 5) return "./svg10/31.svg";
-                else if (d == 4) return "./svg10/22.svg";
-                else if (d == 3) return "./svg10/21.svg";
-                else if (d == 2) return "./svg10/12.svg";
-                else if (d == 1) return "./svg10/11.svg";
-                else if (d == 0) return "./svg10/01.svg";
-                else return "./svg10/00.svg"; })
+                if (d == 10) return "./index_file/52.svg";
+                else if (d == 9) return "./index_file/51.svg";
+                else if (d == 8) return "./index_file/42.svg";
+                else if (d == 7) return "./index_file/41.svg";
+                else if (d == 6) return "./index_file/32.svg";
+                else if (d == 5) return "./index_file/31.svg";
+                else if (d == 4) return "./index_file/22.svg";
+                else if (d == 3) return "./index_file/21.svg";
+                else if (d == 2) return "./index_file/12.svg";
+                else if (d == 1) return "./index_file/11.svg";
+                else if (d == 0) return "./index_file/01.svg";
+                else return "./index_file/00.svg"; })
             .attr("x", "0")
             .attr("y", "0")
             .attr("width",  function(d, i) { return (i + 1) * 60; })
@@ -223,29 +222,29 @@
             .append("img")
             .attr("src", function (d, i) {
                 if (d == 10) 
-                    return "./svg10/52.svg";
+                    return "./index_file/52.svg";
                 else if (d == 9) 
-                    return "./svg10/51.svg";
+                    return "./index_file/51.svg";
                 else if (d == 8) 
-                    return "./svg10/42.svg";
+                    return "./index_file/42.svg";
                 else if (d == 7) 
-                    return "./svg10/41.svg";
+                    return "./index_file/41.svg";
                 else if (d == 6) 
-                    return "./svg10/32.svg";
+                    return "./index_file/32.svg";
                 else if (d == 5) 
-                    return "./svg10/31.svg";
+                    return "./index_file/31.svg";
                 else if (d == 4) 
-                    return "./svg10/22.svg";
+                    return "./index_file/22.svg";
                 else if (d == 3) 
-                    return "./svg10/21.svg";
+                    return "./index_file/21.svg";
                 else if (d == 2) 
-                    return "./svg10/12.svg";
+                    return "./index_file/12.svg";
                 else if (d == 1) 
-                    return "./svg10/11.svg";
+                    return "./index_file/11.svg";
                 else if (d == 0) 
-                    return "./svg10/01.svg";
+                    return "./index_file/01.svg";
                 else 
-                    return "./svg10/00.svg";
+                    return "./index_file/00.svg";
             })
             .attr("width", 50)
             .attr("height", 50)
