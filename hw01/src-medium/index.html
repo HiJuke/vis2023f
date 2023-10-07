@@ -190,68 +190,88 @@
             .attr("height", function(d, i) { return (i + 1) * 60; });
 
 
-        d3.text("./csv/data.csv").then(function(data) {
 
-        //var parsedCSV = d3.csv.parseRows(data);
-        var parsedCSV = d3.csvparseRows(data);
-        //console.log(parsedCSV);
+var tableContainer = d3.select("#div2");
 
-        var container = d3.select("#div2")
-            .append("table")
-            .selectAll("tr")
-            .data(parsedCSV)
-            .enter()
-            .append("tr")
-            .selectAll("td")
-            .data(function (d) { return d; }).enter()
-            .append("td")
-            .html(function (d, i) {
-                if ( i == 4 && d != 'GitHub 帳號' ) {
-                    return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
-                }
-                else if ( i == 0 || isNaN(d)) {
-                    return d;
-                }
-            })
-            .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
-            .attr("class", function (d, i) { 
-                if (d == 10) return "excellent-kid"; 
-                else if (d >= 7 ) return "good-kid"; 
-                else if (d >= 2 ) return "fair-kid"; 
-                else return "poor-kid";})
-            .append("img")
-            .attr("src", function (d, i) {
-                if (d == 10) 
-                    return "./index_files/52.svg";
-                else if (d == 9) 
-                    return "./index_files/51.svg";
-                else if (d == 8) 
-                    return "./index_files/42.svg";
-                else if (d == 7) 
-                    return "./index_files/41.svg";
-                else if (d == 6) 
-                    return "./index_files/32.svg";
-                else if (d == 5) 
-                    return "./index_files/31.svg";
-                else if (d == 4) 
-                    return "./index_files/22.svg";
-                else if (d == 3) 
-                    return "./index_files/21.svg";
-                else if (d == 2) 
-                    return "./index_files/12.svg";
-                else if (d == 1) 
-                    return "./index_files/11.svg";
-                else if (d == 0) 
-                    return "./index_files/01.svg";
-                else 
-                    return "./index_files/00.svg";
-            })
-            .attr("width", 50)
-            .attr("height", 50)
-            ;
-    }).catch(function(error) {
+d3.text("./csv/data.csv").then(function(data) {
+
+    var parsedCSV = d3.csvParseRows(data);
+
+    // 創建表格元素
+    var table = tableContainer.append("table");
+    var thead = table.append("thead");
+    var tbody = table.append("tbody");
+
+    var columns = Object.keys(parsedCSV[0]);
+    thead.append("tr")
+        .selectAll("th")
+        .data(columns)
+        .enter()
+        .append("th")
+        .text(function(d) { return d; });
+
+    // 添加表格行
+    var rows = tbody.selectAll("tr")
+        .data(parsedCSV)
+        .enter()
+        .append("tr");
+
+    // 添加表格單元格
+    var cells = rows.selectAll("td")
+        .data(function(row) {
+            return columns.map(function(column) {
+                return { column: column, value: row[column] };
+            });
+        })
+        .enter()
+        .append("td")
+        .html(function(d, i) {
+            if ( i == 4 && d != 'GitHub 帳號' ) {
+                return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
+            }
+            else if ( i == 0 || isNaN(d)) {
+                return d;
+            }
+        })
+        .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
+        .attr("class", function (d, i) { 
+            if (d == 10) return "excellent-kid"; 
+            else if (d >= 7 ) return "good-kid"; 
+            else if (d >= 2 ) return "fair-kid"; 
+            else return "poor-kid";})
+        .append("img")
+        .attr("src", function (d, i) {
+            if (d == 10) 
+                return "./index_files/52.svg";
+            else if (d == 9) 
+                return "./index_files/51.svg";
+            else if (d == 8) 
+                return "./index_files/42.svg";
+            else if (d == 7) 
+                return "./index_files/41.svg";
+            else if (d == 6) 
+                return "./index_files/32.svg";
+            else if (d == 5) 
+                return "./index_files/31.svg";
+            else if (d == 4) 
+                return "./index_files/22.svg";
+            else if (d == 3) 
+                return "./index_files/21.svg";
+            else if (d == 2) 
+                return "./index_files/12.svg";
+            else if (d == 1) 
+                return "./index_files/11.svg";
+            else if (d == 0) 
+                return "./index_files/01.svg";
+            else 
+                return "./index_files/00.svg";
+        })
+        .attr("width", 50)
+        .attr("height", 50);
+}).catch(function(error) {
     console.log(error);
-    });
+});
+
     </script>
 
 
