@@ -1,0 +1,14 @@
+{
+  "name": "51ec88616d5224d0",
+  "main": "51ec88616d5224d0@237.js",
+  "version": "237.0.0",
+  "homepage": "https://observablehq.com/d/51ec88616d5224d0",
+  "author": {
+    "name": "Hijuke's Workspace",
+    "url": "https://observablehq.com/@hijuke-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
