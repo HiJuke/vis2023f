@@ -1,0 +1,14 @@
+{
+  "name": "ea10a430bc2950ac",
+  "main": "ea10a430bc2950ac@51.js",
+  "version": "51.0.0",
+  "homepage": "https://observablehq.com/d/ea10a430bc2950ac",
+  "author": {
+    "name": "資料可視化",
+    "url": "https://observablehq.com/@vis2023f-joyce"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
