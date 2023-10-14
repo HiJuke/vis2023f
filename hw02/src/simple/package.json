@@ -1,11 +1,11 @@
 {
-  "name": "ce913880495a6f30",
-  "main": "ce913880495a6f30@78.js",
+  "name": "0bbeb3318b7ff7e3",
+  "main": "0bbeb3318b7ff7e3@78.js",
   "version": "78.0.0",
-  "homepage": "https://observablehq.com/d/ce913880495a6f30",
+  "homepage": "https://observablehq.com/d/0bbeb3318b7ff7e3",
   "author": {
-    "name": "資料可視化",
-    "url": "https://observablehq.com/@vis2023f-joyce"
+    "name": "Hijuke's Workspace",
+    "url": "https://observablehq.com/@hijuke-ws"
   },
   "type": "module",
   "peerDependencies": {
