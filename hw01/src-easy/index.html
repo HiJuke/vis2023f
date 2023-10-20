@@ -209,7 +209,7 @@
                 if ( i == 4 && d != 'GitHub 帳號' ) {
                     return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
                 }
-                else if ( i == 0 || isNaN(d)) {
+                else if ( i == 0 || i == 2 || isNaN(d)) {
                     return d;
                 }
             })
