@@ -240,7 +240,7 @@ d3.text("./csv/data.csv").then(function(data) {
             if ( i == 4 && d.value != 'GitHub 帳號' ) {
                 return '<a href="https://' + d.value + '.github.io/vis2023f/" target="_blank"><img src="https://' + d.value + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d.value + '/vis2023f/" target="_blank">' + d.value + '</a>';
             }
-            else if ( i == 0 || isNaN(d.value)) {
+            else if ( i == 0 || i == 2 || isNaN(d.value)) {
                 return d.value;
             }
         })
