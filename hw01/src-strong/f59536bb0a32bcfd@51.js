@@ -11,7 +11,7 @@ __query(FileAttachment("data.csv"),{from:{table:"data"},sort:[],slice:{to:null,f
 )}
 
 function _Data(FileAttachment){return(
-FileAttachment("csv/data.csv").csv()
+FileAttachment("data.csv").csv()
 )}
 
 export default function define(runtime, observer) {
