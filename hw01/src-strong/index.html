@@ -150,7 +150,7 @@
 
     <script type="text/javascript" charset="utf-8">
 
-    d3.csv("./csv/data.csv").then(function(data) {
+    d3.text("./csv/data.csv", function (data) {
 
         parsedCSV = d3.csv.parseRows(data);
         
