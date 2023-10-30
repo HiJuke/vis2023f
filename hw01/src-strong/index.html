@@ -5,11 +5,13 @@
 
 
 <body>
+    <div id="div1"></div>
+
     <script type="text/javascript" charset="utf-8">
     d3.csv("./csv/data.csv").then(function(data) {
       var columns = Object.keys(data[0]);
     
-      var table = d3.select("body").append("table"),
+      var table = d3.select("#div1").append("table"),
           thead = table.append("thead"),
           tbody = table.append("tbody");
     
