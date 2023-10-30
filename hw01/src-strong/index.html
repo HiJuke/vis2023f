@@ -37,7 +37,9 @@
                 else if (d >= 2 ) return "fair-kid"; 
                 else return "poor-kid";})
             .append("img")
-            .attr("src", d)
+            .attr("src", function (d, i) {
+                return d;
+            })
             .attr("width", 50)
             .attr("height", 50)
             ;
