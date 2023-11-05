@@ -165,7 +165,8 @@
             .append("td")
             .html(function (d, i) {
                 if ( i == 4 && d != 'GitHub 帳號' ) {
-                    return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
+                    //return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
+                    return '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
                 }
                 else if ( i == 0 || isNaN(d)) {
                     return d;
@@ -173,7 +174,10 @@
             })
             .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
             .attr("class", function (d, i) { 
-                return d;})
+                if (d == 10) return "excellent-kid"; 
+                else if (d >= 7 ) return "good-kid"; 
+                else if (d >= 2 ) return "fair-kid"; 
+                else return "poor-kid";})
             /*.append("img")
             .attr("src", function (d, i) {
                 return d;
