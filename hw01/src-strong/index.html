@@ -173,10 +173,7 @@
             })
             .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
             .attr("class", function (d, i) { 
-                if (d == 10) return "excellent-kid"; 
-                else if (d >= 7 ) return "good-kid"; 
-                else if (d >= 2 ) return "fair-kid"; 
-                else return "poor-kid";})
+                return d;})
             /*.append("img")
             .attr("src", function (d, i) {
                 return d;
