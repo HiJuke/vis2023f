@@ -172,7 +172,10 @@
                     return d;
                 }
             })
-            .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
+            
+            //.filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
+
+            .filter(function (d) { return d; }).enter()
             
             .attr("class", function (d) { return d; }).enter()
 
