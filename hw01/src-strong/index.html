@@ -42,13 +42,13 @@
         table {
             border-collapse: collapse;
             border: 2px rgb(255, 255, 255) solid;
-            font-family: 'CircleFont', 'Noto Serif JP', serif;
-            font-size: 16pt;
+            font-family: 'Arial', 'Noto Serif JP', serif;
+            font-size: 12pt;
             /* font: 16px sans-serif; */
             margin-left: auto;
             margin-right: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         tr {
@@ -57,6 +57,7 @@
         }
 
         td,
+
         th {
             border: 1px rgb(155, 177, 211) solid;
             padding: 5px;
@@ -174,7 +175,7 @@
             .html(function (d, i) {
                 if ( i == 4 && d != 'GitHub 帳號' ) {
                     //return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
-                    return '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
+                    return '<a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
                 }
                 /*else if ( i == 0 || isNaN(d)) {
                     return d;
